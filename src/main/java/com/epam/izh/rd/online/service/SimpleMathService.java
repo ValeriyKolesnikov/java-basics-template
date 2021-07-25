@@ -13,14 +13,7 @@ public class SimpleMathService implements MathService {
      */
     @Override
     public int compare(int value1, int value2) {
-          /* if (value1 == value2) {
-            return 0;
-        } else if (value1 > value2) {
-            return 1;
-          } else {
-            return -1;
-           } */
-        return Integer.compare(value1, value2);
+     return Integer.compare(value1, value2);
     }
 
     /**
@@ -74,15 +67,15 @@ public class SimpleMathService implements MathService {
     public int[] getEvenDigits(int[] values) {
         int size = 0;
         int j = 0;
-        for (int i = 0; i < values.length; i++) {
-            if (values[i] % 2 == 0) {
+         for (int value : values) {
+            if (value % 2 == 0) {
                 size++;
             }
         }
         int [] evens = new int [size];
-        for (int i = 0; i < values.length; i++) {
-             if (values[i] % 2 == 0) {
-                 evens[j] = values[i];
+        for (int value : values) {
+             if (value % 2 == 0) {
+                 evens[j] = value;
                  j++;
              }
         }
